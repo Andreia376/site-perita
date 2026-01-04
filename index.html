@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andréia Bento - Perita Judicial</title>
+    <title>Andréia Bento | Contadora-Perita Judicial em Jaú e Região</title>
+    <meta name="description" content="Andréia Bento - Perita Judicial e Assistente Técnica Contábil. Especialista em Liquidação de Sentença, Revisionais e Apuração de Haveres em SP, MG e SC.">
+    <meta name="keywords" content="Perita Judicial, Perito Contador, Contadora Perita, Jaú, TJSP, Assistente Técnica, Cálculos Judiciais">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Georgia', serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Georgia', serif; scroll-behavior: smooth; }
         body { background-color: #0a0a0a; color: #fff; line-height: 1.6; }
         :root { --dourado: #d4af37; --dourado-escuro: #b8860b; }
 
@@ -14,35 +17,40 @@
         nav { background: #000; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--dourado); position: sticky; top: 0; z-index: 1000; }
         .logo { color: var(--dourado); font-size: 1.4rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* Hero Section */
-        .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070'); background-size: cover; background-position: center; padding: 20px; }
-        .hero h1 { color: var(--dourado); font-size: 3.5rem; margin-bottom: 15px; font-weight: normal; }
-        .hero p { font-size: 1.3rem; color: #ddd; max-width: 800px; font-style: italic; margin-bottom: 30px; }
+        /* Hero */
+        .hero { height: 85vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070'); background-size: cover; padding: 20px; }
+        .hero h1 { color: var(--dourado); font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 15px; }
+        
+        /* Botão WhatsApp */
+        .btn-whats { background-color: #25d366; color: white; padding: 18px 35px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; }
+        .btn-whats:hover { transform: scale(1.05); background-color: #1da851; }
 
-        /* Botão WhatsApp Central */
-        .btn-whats { background-color: #25d366; color: white; padding: 18px 35px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; font-size: 1.1rem; }
-        .btn-whats:hover { background-color: #1da851; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        /* Seções Gerais */
+        section { padding: 80px 10%; }
+        h2.secao-titulo { text-align: center; color: var(--dourado); font-size: 2.2rem; margin-bottom: 50px; }
 
-        /* Seção Sobre */
-        .sobre { padding: 80px 15%; background-color: #111; text-align: center; border-bottom: 1px solid #222; }
-        .sobre h2 { color: var(--dourado); font-size: 2.2rem; margin-bottom: 25px; font-weight: normal; }
+        /* Processo de Trabalho */
+        .processo-container { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; }
+        .passo { flex: 1; min-width: 200px; text-align: center; padding: 20px; border-left: 2px solid var(--dourado); margin-bottom: 20px; }
+        .passo span { font-size: 2.5rem; color: var(--dourado); display: block; margin-bottom: 10px; }
 
-        /* Especialidades Interativas (Clique para Abrir) */
-        .especialidades-grid { padding: 60px 10%; background-color: #0a0a0a; text-align: center; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { padding: 30px; border: 1px solid #222; background: #111; transition: 0.3s; text-align: left; }
-        .card:hover { border-color: var(--dourado); }
-        .card i { color: var(--dourado); font-size: 2rem; margin-bottom: 15px; }
-        .card h3 { color: var(--dourado); display: inline-block; margin-left: 10px; font-weight: normal; }
+        /* Blog Section */
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .artigo { background: #111; border: 1px solid #222; padding: 20px; border-radius: 8px; transition: 0.3s; }
+        .artigo:hover { border-color: var(--dourado); }
+        .artigo h4 { color: var(--dourado); margin-bottom: 15px; }
+        .ler-mais { color: var(--dourado); text-decoration: none; font-size: 0.9rem; font-weight: bold; }
+
+        /* Depoimentos */
+        .depoimento { font-style: italic; background: #1a1a1a; padding: 30px; border-radius: 15px; position: relative; margin-bottom: 30px; }
+        .depoimento::before { content: '"'; font-size: 5rem; color: var(--dourado); position: absolute; top: -10px; left: 10px; opacity: 0.3; }
+
+        /* Estilos Existentes (Cards, Footer, etc) */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { padding: 30px; border: 1px solid #222; background: #111; text-align: left; }
         summary { list-style: none; cursor: pointer; outline: none; }
-        summary::-webkit-details-marker { display: none; }
-
-        /* Cards Contábeis */
-        .contabil-card { width: 250px; padding: 20px; border: 1px solid #eee; border-radius: 10px; transition: 0.3s; background: #fff; color: #333; }
-        .contabil-card:hover { border-color: #b8860b; transform: translateY(-5px); }
-
-        /* WhatsApp Flutuante */
-        .whats-float { position:fixed; width:65px; height:65px; bottom:30px; right:30px; background-color:#25d366; color:#FFF; border-radius:50px; text-align:center; font-size:35px; box-shadow: 2px 2px 15px rgba(0,0,0,0.3); z-index:9999; display:flex; align-items:center; justify-content:center; text-decoration:none; }
+        
+        .whats-float { position:fixed; width:65px; height:65px; bottom:30px; right:30px; background-color:#25d366; color:#FFF; border-radius:50px; text-align:center; font-size:35px; z-index:9999; display:flex; align-items:center; justify-content:center; text-decoration:none; }
     </style>
 </head>
 <body>
@@ -53,105 +61,118 @@
 
     <header class="hero">
         <h1>Andréia Bento</h1>
-        <p>Excelência técnica, imparcialidade e rigor científico na elaboração de laudos e pareceres periciais.</p>
+        <p style="font-size: 1.4rem; color: #ddd; margin-bottom: 30px;">Contadora-Perita: Rigor técnico e precisão financeira nos autos.</p>
         <a href="https://wa.me/5514991167825" target="_blank" class="btn-whats">
-            <i class="fab fa-whatsapp"></i> Solicitar Consultoria Técnica
+            <i class="fab fa-whatsapp"></i> Falar com a Especialista
         </a>
     </header>
 
-    <section class="sobre">
-        <h2>Compromisso e Ética</h2>
-        <p>Com atuação focada na clareza técnica e no suporte especializado a magistrados e advogados, Andréia Bento oferece soluções periciais que unem conhecimento profundo e integridade em cada detalhe do processo.</p>
+    <section style="background-color: #000;">
+        <h2 class="secao-titulo">Como Atuamos</h2>
+        <div class="processo-container">
+            <div class="passo">
+                <span>01</span>
+                <h4>Análise Preliminar</h4>
+                <p>Estudo detalhado da viabilidade técnica do objeto da perícia.</p>
+            </div>
+            <div class="passo">
+                <span>02</span>
+                <h4>Quesitos</h4>
+                <p>Elaboração de perguntas estratégicas para nortear a perícia oficial.</p>
+            </div>
+            <div class="passo">
+                <span>03</span>
+                <h4>Diligências</h4>
+                <p>Acompanhamento presencial ou remoto de perícias e vistorias.</p>
+            </div>
+            <div class="passo">
+                <span>04</span>
+                <h4>Parecer Final</h4>
+                <p>Entrega de laudo robusto com metodologia científica e clareza.</p>
+            </div>
+        </div>
     </section>
 
-    <section class="especialidades-grid">
+    <section>
+        <h2 class="secao-titulo">Serviços Especializados</h2>
         <div class="grid">
             <div class="card">
                 <details>
                     <summary>
                         <i class="fas fa-gavel"></i>
                         <h3>Perícia Judicial</h3>
-                        <p style="margin-top: 10px; color: #bbb;">Auxílio técnico direto ao juízo com laudos...</p>
-                        <small style="color: var(--dourado); display: block; margin-top: 10px;">[ Clique para detalhar ]</small>
+                        <p style="margin-top: 10px; color: #bbb;">Clique para saber mais...</p>
                     </summary>
-                    <div style="margin-top: 15px; padding-top: 10px; border-top: 1px solid #333; color: #ddd; font-size: 0.9rem;">
-                        Atuação como Perita Nomeada. Elaboração de laudos contábeis fundamentados que auxiliam o magistrado na formação do seu convencimento.
-                    </div>
+                    <div style="margin-top: 15px; color: #ddd;">Nomeação judicial para atuar como perita do juízo em processos contábeis complexos.</div>
                 </details>
             </div>
-
             <div class="card">
                 <details>
                     <summary>
                         <i class="fas fa-file-signature"></i>
                         <h3>Assistência Técnica</h3>
-                        <p style="margin-top: 10px; color: #bbb;">Acompanhamento estratégico para advogados...</p>
-                        <small style="color: var(--dourado); display: block; margin-top: 10px;">[ Clique para detalhar ]</small>
+                        <p style="margin-top: 10px; color: #bbb;">Clique para saber mais...</p>
                     </summary>
-                    <div style="margin-top: 15px; padding-top: 10px; border-top: 1px solid #333; color: #ddd; font-size: 0.9rem;">
-                        Suporte integral: elaboração de quesitos, análise de laudos oficiais e redação de pareceres técnicos especializados.
-                    </div>
+                    <div style="margin-top: 15px; color: #ddd;">Defesa dos interesses técnicos da parte, garantindo a lisura do laudo oficial.</div>
                 </details>
             </div>
-
             <div class="card">
                 <details>
                     <summary>
-                        <i class="fas fa-search"></i>
-                        <h3>Pareceres Técnicos</h3>
-                        <p style="margin-top: 10px; color: #bbb;">Análises detalhadas para resolução de conflitos...</p>
-                        <small style="color: var(--dourado); display: block; margin-top: 10px;">[ Clique para detalhar ]</small>
+                        <i class="fas fa-calculator"></i>
+                        <h3>Cálculos Judiciais</h3>
+                        <p style="margin-top: 10px; color: #bbb;">Clique para saber mais...</p>
                     </summary>
-                    <div style="margin-top: 15px; padding-top: 10px; border-top: 1px solid #333; color: #ddd; font-size: 0.9rem;">
-                        Produção de provas documentais robustas para embasar petições iniciais ou acordos extrajudiciais.
-                    </div>
+                    <div style="margin-top: 15px; color: #ddd;">Liquidação de sentença, revisionais bancárias e apuração de haveres.</div>
                 </details>
             </div>
         </div>
     </section>
 
-    <section style="background-color: #ffffff; padding: 50px 0; text-align: center; border-top: 1px solid #eee;">
-        <h2 style="color: #b8860b; margin-bottom: 30px; font-size: 24px;">Tribunais onde atuo como Perita Cadastrada</h2>
-        <div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; margin: 0 auto; padding: 0 20px;">
-            <div style="text-align: center; width: 120px;">
-                <img src="tjsp.png" alt="TJSP" style="width: 100%; filter: grayscale(100%); transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
-                <p style="font-size: 12px; color: #666;">TJSP</p>
+    <section style="background-color: #111;">
+        <h2 class="secao-titulo">Artigos Técnicos</h2>
+        <div class="blog-grid">
+            <article class="artigo">
+                <h4>A Importância do Assistente Técnico</h4>
+                <p>Descubra como um parecer técnico divergente pode mudar o rumo de um processo...</p>
+                <br><a href="#" class="ler-mais">Ler Artigo Completo →</a>
+            </article>
+            <article class="artigo">
+                <h4>Juros Abusivos em Contratos</h4>
+                <p>Como identificar anatocismo e taxas acima da média de mercado em financiamentos...</p>
+                <br><a href="#" class="ler-mais">Ler Artigo Completo →</a>
+            </article>
+            <article class="artigo">
+                <h4>Dissolução Societária</h4>
+                <p>O método de fluxo de caixa descontado na apuração de haveres de sócios...</p>
+                <br><a href="#" class="ler-mais">Ler Artigo Completo →</a>
+            </article>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="secao-titulo">O que dizem os parceiros</h2>
+        <div class="blog-grid">
+            <div class="depoimento">
+                <p>"Rigor técnico impecável. O parecer da Dra. Andréia foi decisivo para nossa vitória no caso revisional."</p>
+                <br><strong>- Dr. Ricardo M., Advogado Cível</strong>
             </div>
-            <div style="text-align: center; width: 120px;">
-                <img src="tjmg.jpg" alt="TJMG" style="width: 100%; filter: grayscale(100%); transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
-                <p style="font-size: 12px; color: #666;">TJMG</p>
-            </div>
-            <div style="text-align: center; width: 120px;">
-                <img src="TJSC.png" alt="TJSC" style="width: 100%; filter: grayscale(100%); transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
-                <p style="font-size: 12px; color: #666;">TJSC</p>
+            <div class="depoimento">
+                <p>"Atendimento ágil e cálculos extremamente precisos. Recomendo para perícias complexas."</p>
+                <br><strong>- Dra. Fernanda S., Especialista em Direito do Trabalho</strong>
             </div>
         </div>
     </section>
 
-    <section style="background-color: #f4f4f4; padding: 60px 20px; text-align: center;">
-        <h2 style="color: #b8860b; margin-bottom: 40px; font-size: 26px;">Especialidades em Perícia Contábil</h2>
-        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
-            <div class="contabil-card">📊<h4 style="color:#b8860b">Liquidação de Sentença</h4><p style="font-size:13px">Cálculos Cíveis e Trabalhistas.</p></div>
-            <div class="contabil-card">🏦<h4 style="color:#b8860b">Revisionais Bancárias</h4><p style="font-size:13px">Análise de juros e contratos.</p></div>
-            <div class="contabil-card">🏢<h4 style="color:#b8860b">Apuração de Haveres</h4><p style="font-size:13px">Dissolução de sociedades.</p></div>
-            <div class="contabil-card">📉<h4 style="color:#b8860b">Perícia Tributária</h4><p style="font-size:13px">Auditoria e execuções fiscais.</p></div>
-        </div>
-    </section>
-
-    <footer style="background-color: #1a1a1a; padding: 50px 20px; text-align: center; border-top: 4px solid #b8860b;">
+    <footer style="background-color: #000; padding: 60px 20px; text-align: center; border-top: 4px solid var(--dourado);">
         <div style="margin-bottom: 30px; display: flex; justify-content: center; gap: 40px;">
-            <a href="https://instagram.com/andreiabentoperita?igsh=OTM2YTR1aGt1YWoy" target="_blank" style="font-size: 3.5rem; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"><i class="fab fa-instagram"></i></a>
-            <a href="https://facebook.com/profile.php?id=100080561289863&locale=pt_BR" target="_blank" style="font-size: 3.5rem; color: #1877F2;"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/andreiabentoperita" target="_blank" style="font-size: 3.5rem; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/profile.php?id=100080561289863" target="_blank" style="font-size: 3.5rem; color: #1877F2;"><i class="fab fa-facebook"></i></a>
         </div>
-        
-        <h3 style="color: #b8860b; font-size: 24px;">Andreia Bento</h3>
-        <p style="letter-spacing: 1px;">Contadora-Perita</p>
-        <p style="color: #d4af37; font-weight: bold;">CRC/SP 339199/O-2</p>
-        
-        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 20px; font-size: 15px;">
-            <p>📧 <a href="mailto:periciasjudiciaisbento@hotmail.com" style="color:#fff; text-decoration:none;">periciasjudiciaisbento@hotmail.com</a></p>
-            <p>⚖️ Atuação: TJSP | TJMG | TJSC</p>
-        </div>
+        <h3 style="color: var(--dourado);">Andreia Bento</h3>
+        <p>Contadora-Perita | CRC/SP 339199/O-2</p>
+        <p>📧 periciasjudiciaisbento@hotmail.com</p>
+        <p style="font-size: 12px; margin-top: 30px; color: #555;">© 2026 Todos os direitos reservados. Atuação nacional.</p>
     </footer>
 
     <a href="https://wa.me/5514991167825" class="whats-float" target="_blank">
