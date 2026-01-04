@@ -19,29 +19,27 @@
         .hero h1 { color: var(--dourado); font-size: 3.5rem; margin-bottom: 15px; font-weight: normal; }
         .hero p { font-size: 1.3rem; color: #ddd; max-width: 800px; font-style: italic; margin-bottom: 30px; }
 
-        /* Botão WhatsApp */
+        /* Botão WhatsApp Central */
         .btn-whats { background-color: #25d366; color: white; padding: 18px 35px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; font-size: 1.1rem; }
         .btn-whats:hover { background-color: #1da851; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
 
-        /* Seção Sobre */
-        .sobre { padding: 100px 15%; background-color: #111; text-align: center; border-bottom: 1px solid #222; }
+        /* Seções Gerais */
+        .sobre { padding: 80px 15%; background-color: #111; text-align: center; border-bottom: 1px solid #222; }
         .sobre h2 { color: var(--dourado); font-size: 2.2rem; margin-bottom: 25px; font-weight: normal; }
-        .sobre p { color: #ccc; font-size: 1.2rem; max-width: 900px; margin: 0 auto; }
-
-        /* Especialidades */
-        .especialidades { padding: 100px 10%; background-color: #0a0a0a; text-align: center; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
+        
+        .especialidades-grid { padding: 60px 10%; background-color: #0a0a0a; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
         .card { padding: 40px; border: 1px solid #222; background: #111; transition: 0.3s; }
         .card:hover { border-color: var(--dourado); transform: translateY(-10px); }
         .card i { color: var(--dourado); font-size: 2.5rem; margin-bottom: 20px; }
         .card h3 { color: var(--dourado); margin-bottom: 15px; font-weight: normal; }
 
-        /* Rodapé */
-        footer { padding: 80px 10%; text-align: center; background: #000; border-top: 2px solid var(--dourado); }
-        .redes { margin-bottom: 30px; }
-        .redes a { color: var(--dourado); font-size: 2rem; margin: 0 20px; text-decoration: none; transition: 0.3s; }
-        .redes a:hover { color: #fff; }
-        .footer-info { color: #888; font-size: 0.9rem; margin-top: 20px; }
+        /* Estilo dos Cards de Especialidade Contábil */
+        .contabil-card { width: 250px; padding: 20px; border: 1px solid #eee; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; background: #fff; color: #333; }
+        .contabil-card:hover { border-color: #b8860b; transform: scale(1.05); }
+
+        /* WhatsApp Flutuante */
+        .whats-float { position:fixed; width:60px; height:60px; bottom:40px; right:40px; background-color:#25d366; color:#FFF; border-radius:50px; text-align:center; font-size:30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.5); z-index:1000; display:flex; align-items:center; justify-content:center; text-decoration:none; }
     </style>
 </head>
 <body>
@@ -63,7 +61,7 @@
         <p>Com atuação focada na clareza técnica e no suporte especializado a magistrados e advogados, Andréia Bento oferece soluções periciais que unem conhecimento profundo e integridade em cada detalhe do processo.</p>
     </section>
 
-    <section class="especialidades">
+    <section class="especialidades-grid">
         <div class="grid">
             <div class="card">
                 <i class="fas fa-gavel"></i>
@@ -83,96 +81,71 @@
         </div>
     </section>
 
-    <footer>
-        <div class="redes">
-            <a href="https://instagram.com/andreiabentoperita?igsh=OTM2YTR1aGt1YWoy" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://facebook.com/profile.php?id=100080561289863&locale=pt_BR" target="_blank"><i class="fab fa-facebook"></i></a>
+    <section style="background-color: #ffffff; padding: 50px 0; text-align: center; border-top: 1px solid #eee;">
+        <h2 style="color: #b8860b; font-family: serif; margin-bottom: 30px; font-size: 28px;">Tribunais onde atuo como Perita Cadastrada</h2>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+            <div style="text-align: center; width: 150px;">
+                <img src="tjsp.png" alt="TJSP" style="width: 100%; height: auto; filter: grayscale(100%); transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                <p style="font-size: 12px; color: #666; margin-top: 10px;">TJSP</p>
+            </div>
+            <div style="text-align: center; width: 150px;">
+                <img src="tjmg.jpg" alt="TJMG" style="width: 100%; height: auto; filter: grayscale(100%); transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                <p style="font-size: 12px; color: #666; margin-top: 10px;">TJMG</p>
+            </div>
+            <div style="text-align: center; width: 150px;">
+                <img src="TJSC.png" alt="TJSC" style="width: 100%; height: auto; filter: grayscale(100%); transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                <p style="font-size: 12px; color: #666; margin-top: 10px;">TJSC</p>
+            </div>
         </div>
-        <p style="color: var(--dourado); letter-spacing: 1px;">ANDRÉIA BENTO PERITA</p>
-        <p class="footer-info">© 2026 Todos os direitos reservados. | Atendimento em todo o Brasil.</p>
-    </footer><section style="background-color: #ffffff; padding: 50px 0; text-align: center; border-top: 1px solid #eee;">
-    <h2 style="color: #b8860b; font-family: 'Playfair Display', serif; margin-bottom: 30px; font-size: 28px;">Tribunais onde atuo como Perita Cadastrada</h2>
-    
-    <div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto; padding: 0 20px;">
-        
-        <div style="text-align: center; width: 150px;">
-            <img src="tjsp.png" alt="TJSP" style="width: 100%; height: auto; filter: grayscale(100%); transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
-            <p style="font-size: 12px; color: #666; margin-top: 10px;">TJSP</p>
-        </div>
+    </section>
 
-        <div style="text-align: center; width: 150px;">
-            <img src="tjmg.jpg" alt="TJMG" style="width: 100%; height: auto; filter: grayscale(100%); transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
-            <p style="font-size: 12px; color: #666; margin-top: 10px;">TJMG</p>
+    <section style="background-color: #f9f9f9; padding: 60px 20px; text-align: center;">
+        <h2 style="color: #b8860b; margin-bottom: 40px; font-size: 28px;">Especialidades em Perícia Contábil</h2>
+        <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+            <div class="contabil-card">
+                <div style="font-size: 40px; margin-bottom: 15px;">📊</div>
+                <h4 style="color: #b8860b; margin-bottom: 10px;">Liquidação de Sentença</h4>
+                <p style="font-size: 14px; color: #666;">Cálculos precisos para atualização de valores em processos cíveis e trabalhistas.</p>
+            </div>
+            <div class="contabil-card">
+                <div style="font-size: 40px; margin-bottom: 15px;">🏦</div>
+                <h4 style="color: #b8860b; margin-bottom: 10px;">Revisionais Bancárias</h4>
+                <p style="font-size: 14px; color: #666;">Análise de juros abusivos e recálculo de contratos de financiamento.</p>
+            </div>
+            <div class="contabil-card">
+                <div style="font-size: 40px; margin-bottom: 15px;">🏢</div>
+                <h4 style="color: #b8860b; margin-bottom: 10px;">Apuração de Haveres</h4>
+                <p style="font-size: 14px; color: #666;">Avaliação de quotas societárias em dissoluções de empresas.</p>
+            </div>
+            <div class="contabil-card">
+                <div style="font-size: 40px; margin-bottom: 15px;">📉</div>
+                <h4 style="color: #b8860b; margin-bottom: 10px;">Perícia Tributária</h4>
+                <p style="font-size: 14px; color: #666;">Auditoria técnica em tributos e suporte em processos fiscais.</p>
+            </div>
         </div>
+    </section>
 
-        <div style="text-align: center; width: 150px;">
-            <img src="TJSC.png" alt="TJSC" style="width: 100%; height: auto; filter: grayscale(100%); transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
-            <p style="font-size: 12px; color: #666; margin-top: 10px;">TJSC</p>
-        </div>
-
-    </div>
-</section>
-<footer style="background-color: #1a1a1a; color: #ffffff; padding: 50px 20px; text-align: center; font-family: 'Playfair Display', serif; border-top: 4px solid #b8860b;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-        <h3 style="color: #b8860b; margin-bottom: 10px; font-size: 24px;">Andreia Bento</h3>
-        <p style="font-size: 16px; margin-bottom: 5px; letter-spacing: 1px;">Contadora-Perita</p>
-        <p style="font-size: 15px; color: #d4af37; font-weight: bold; margin-bottom: 20px;">CRC/SP 339199/O-2</p>
-        
-        <div style="margin: 25px 0; border-top: 1px solid #333; padding-top: 25px;">
-            <p style="font-size: 15px; margin-bottom: 10px;">
-                <span style="color: #b8860b;">📧</span> 
-                <a href="mailto:periciasjudiciaisbento@hotmail.com" style="color: #fff; text-decoration: none;">periciasjudiciaisbento@hotmail.com</a>
-            </p>
-            <p style="font-size: 15px;">
-                <span style="color: #b8860b;">⚖️</span> Atuação: TJSP | TJMG | TJSC
-            </p>
+    <footer style="background-color: #1a1a1a; color: #ffffff; padding: 50px 20px; text-align: center; border-top: 4px solid #b8860b;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div class="redes" style="margin-bottom: 20px;">
+                <a href="https://instagram.com/andreiabentoperita?igsh=OTM2YTR1aGt1YWoy" target="_blank" style="color: var(--dourado); font-size: 1.5rem; margin: 0 15px;"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/profile.php?id=100080561289863&locale=pt_BR" target="_blank" style="color: var(--dourado); font-size: 1.5rem; margin: 0 15px;"><i class="fab fa-facebook"></i></a>
+            </div>
+            <h3 style="color: #b8860b; margin-bottom: 5px; font-size: 24px;">Andreia Bento</h3>
+            <p style="font-size: 16px; margin-bottom: 5px;">Contadora-Perita</p>
+            <p style="font-size: 15px; color: #d4af37; font-weight: bold; margin-bottom: 20px;">CRC/SP 339199/O-2</p>
             
-            <section style="background-color: #ffffff; padding: 60px 20px; text-align: center; font-family: 'Playfair Display', serif;">
-    <h2 style="color: #b8860b; margin-bottom: 40px; font-size: 28px;">Especialidades em Perícia Contábil</h2>
-    
-    <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
-        
-        <div style="width: 250px; padding: 20px; border: 1px solid #eee; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s;" onmouseover="this.style.borderColor='#b8860b'" onmouseout="this.style.borderColor='#eee'">
-            <div style="font-size: 40px; margin-bottom: 15px;">📊</div>
-            <h4 style="color: #b8860b; margin-bottom: 10px;">Liquidação de Sentença</h4>
-            <p style="font-size: 14px; color: #666; font-family: sans-serif;">Cálculos precisos para atualização de valores em processos cíveis e trabalhistas.</p>
+            <div style="margin: 20px 0; border-top: 1px solid #333; padding-top: 20px;">
+                <p style="font-size: 15px; margin-bottom: 10px;">📧 <a href="mailto:periciasjudiciaisbento@hotmail.com" style="color: #fff; text-decoration: none;">periciasjudiciaisbento@hotmail.com</a></p>
+                <p style="font-size: 15px;">⚖️ Atuação: TJSP | TJMG | TJSC</p>
+            </div>
+            <p style="font-size: 12px; color: #777; margin-top: 20px;">© 2026 Andreia Bento - Perícias Judiciais. Todos os direitos reservados.</p>
         </div>
+    </footer>
 
-        <div style="width: 250px; padding: 20px; border: 1px solid #eee; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s;" onmouseover="this.style.borderColor='#b8860b'" onmouseout="this.style.borderColor='#eee'">
-            <div style="font-size: 40px; margin-bottom: 15px;">🏦</div>
-            <h4 style="color: #b8860b; margin-bottom: 10px;">Revisionais Bancárias</h4>
-            <p style="font-size: 14px; color: #666; font-family: sans-serif;">Análise de juros abusivos, anatocismo e recálculo de contratos de financiamento.</p>
-        </div>
+    <a href="https://wa.me/5514991167825" class="whats-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width:35px;" alt="WhatsApp">
+    </a>
 
-        <div style="width: 250px; padding: 20px; border: 1px solid #eee; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s;" onmouseover="this.style.borderColor='#b8860b'" onmouseout="this.style.borderColor='#eee'">
-            <div style="font-size: 40px; margin-bottom: 15px;">🏢</div>
-            <h4 style="color: #b8860b; margin-bottom: 10px;">Apuração de Haveres</h4>
-            <p style="font-size: 14px; color: #666; font-family: sans-serif;">Avaliação de quotas societárias e diagnóstico financeiro em dissoluções de empresas.</p>
-        </div>
-
-        <div style="width: 250px; padding: 20px; border: 1px solid #eee; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s;" onmouseover="this.style.borderColor='#b8860b'" onmouseout="this.style.borderColor='#eee'">
-            <div style="font-size: 40px; margin-bottom: 15px;">📉</div>
-            <h4 style="color: #b8860b; margin-bottom: 10px;">Perícia Tributária</h4>
-            <p style="font-size: 14px; color: #666; font-family: sans-serif;">Auditoria técnica em tributos e suporte em processos de execução fiscal.</p>
-        </div>
-
-    </div>
-</section>
-            
-        </div>
-
-        <p style="font-size: 12px; color: #777; margin-top: 30px; font-family: sans-serif;">
-            &copy; 2026 Andreia Bento - Perícias Judiciais. Todos os direitos reservados.
-        </p>
-    </div>
-</footer>
-
-<a href="https://wa.me/5514991167825" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 2px 2px 10px rgba(0,0,0,0.5);z-index:1000;display:flex;align-items:center;justify-content:center;text-decoration:none;" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width:35px;" alt="WhatsApp">
-</a>
 </body>
-    <a href="https://wa.me/5514991167825" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 2px 2px 3px #999;z-index:1000;" target="_blank">
-<i style="margin-top:16px" class="fa fa-whatsapp"></i>
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width:35px; margin-top:12px;">
-</a>
 </html>
