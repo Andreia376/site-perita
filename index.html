@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andréia Bento | Contadora-Perita Judicial em Jaú e Região</title>
-    <meta name="description" content="Andréia Bento - Perita Judicial e Assistente Técnica Contábil. Especialista em PASEP, Revisionais e Liquidação de Sentença.">
+    <title>Andréia Bento | Perita Contábil Judicial - Jaú e Região</title>
+    <meta name="description" content="Andréia Bento Franco da Rocha - Perita Judicial e Assistente Técnica. Especialista em PASEP, Revisionais e Gestão Tributária. Atendimento em Jaú, Bauru e região.">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -12,140 +12,93 @@
         body { background-color: #0a0a0a; color: #fff; line-height: 1.6; }
         :root { --dourado: #d4af37; --dourado-escuro: #b8860b; }
 
-        nav { background: #000; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--dourado); position: sticky; top: 0; z-index: 1000; }
+        nav { background: #000; padding: 20px 5%; border-bottom: 2px solid var(--dourado); position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
         .logo { color: var(--dourado); font-size: 1.4rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
 
-        .hero { height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070'); background-size: cover; padding: 20px; }
-        .hero h1 { color: var(--dourado); font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 15px; }
+        .hero { height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070'); background-size: cover; padding: 20px; }
+        .hero h1 { color: var(--dourado); font-size: clamp(1.8rem, 5vw, 3rem); margin-bottom: 10px; }
         
-        .btn-whats { background-color: #25d366; color: white; padding: 18px 35px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; }
+        .btn-whats { background-color: #25d366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; }
         
         section { padding: 60px 10%; }
-        h2.secao-titulo { text-align: center; color: var(--dourado); font-size: 2.2rem; margin-bottom: 40px; }
+        h2.secao-titulo { text-align: center; color: var(--dourado); font-size: 2.2rem; margin-bottom: 40px; border-bottom: 1px solid #222; padding-bottom: 10px; }
 
-        /* Grid de Artigos e Serviços */
+        .container-perfil { display: flex; flex-wrap: wrap; align-items: center; gap: 40px; max-width: 1200px; margin: 0 auto; }
+        .foto-box { flex: 1; min-width: 300px; text-align: center; }
+        .foto-box img { width: 100%; max-width: 400px; border-radius: 15px; border: 3px solid var(--dourado); box-shadow: 0 15px 35px rgba(0,0,0,0.6); }
+        .info-box { flex: 1.5; min-width: 300px; }
+
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .card { padding: 30px; border: 1px solid #222; background: #111; transition: 0.3s; }
-        .card:hover { border-color: var(--dourado); }
-        summary { list-style: none; cursor: pointer; outline: none; font-weight: bold; color: var(--dourado); }
+        .card { padding: 25px; border: 1px solid #222; background: #111; border-radius: 8px; transition: 0.3s; }
+        .card:hover { border-color: var(--dourado); transform: translateY(-5px); }
+        summary { cursor: pointer; color: var(--dourado); font-weight: bold; outline: none; margin-bottom: 10px; font-size: 1.1rem; list-style: none; }
         
         .whats-float { position:fixed; width:65px; height:65px; bottom:30px; right:30px; background-color:#25d366; color:#FFF; border-radius:50px; text-align:center; font-size:35px; z-index:9999; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
 
-        .perfil-img { width: 100%; max-width: 350px; border-radius: 15px; border: 2px solid var(--dourado); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .cidades-tag { display: inline-block; background: #1a1a1a; color: #aaa; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; margin: 4px; border: 1px solid #333; }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">Andréia Bento Perita</div>
-    </nav>
+    <nav><div class="logo">Andréia Bento Perita</div></nav>
 
     <header class="hero">
         <h1>Andréia Bento Franco da Rocha</h1>
-        <p style="font-size: 1.3rem; color: #ddd; margin-bottom: 30px;">Especialista em Perícia Contábil Judicial e Extrajudicial[cite: 5, 46].</p>
-        <a href="https://wa.me/5514991167825" target="_blank" class="btn-whats">
-            <i class="fab fa-whatsapp"></i> Falar com a Perita
-        </a>
+        <p style="font-size: 1.2rem; color: #ddd; margin-bottom: 25px;">Perita Contábil Judicial e Extrajudicial | CRC/SP 339199/O-2</p>
+        <a href="https://wa.me/5514991167825" target="_blank" class="btn-whats"><i class="fab fa-whatsapp"></i> Iniciar Consultoria Técnica</a>
     </header>
 
     <section id="sobre" style="background-color: #000;">
-        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 50px; max-width: 1200px; margin: 0 auto;">
-            <div style="flex: 1; min-width: 300px; text-align: center;">
-                <img src="andreia.jpg" alt="Andréia Bento" class="perfil-img">
+        <div class="container-perfil">
+            <div class="foto-box">
+                <img src="perita-andreia.jpg" alt="Andréia Bento Franco da Rocha">
             </div>
-            <div style="flex: 1; min-width: 300px;">
-                <h2 style="color: var(--dourado); margin-bottom: 5px;">Andréia Bento Franco da Rocha</h2>
-                <p style="color: var(--dourado); font-weight: bold; margin-bottom: 20px; font-size: 1.2rem;">CRC/SP 339199/O-2 [cite: 3]</p>
+            <div class="info-box">
+                <h2 style="color: var(--dourado); margin-bottom: 10px;">Sobre a Especialista</h2>
+                <p style="color: #ccc; margin-bottom: 25px; font-style: italic;">Atuando com ética, técnica e imparcialidade em perícias contábeis judiciais e extrajudiciais conforme as normas NBC TP 01 e NBC PP 01.</p>
                 
-                <h4 style="color: #fff; margin-bottom: 10px; border-bottom: 1px solid var(--dourado); display: inline-block;">Formação Acadêmica</h4>
-                <ul style="list-style: none; color: #ddd; margin-bottom: 25px; line-height: 1.8;">
-                    <li>🎓 Pós-Graduação em Contabilidade, Perícia e Auditoria </li>
-                    <li>🎓 MBA em Planejamento e Gestão Tributária </li>
-                    <li>🎓 Bacharela em Ciências Contábeis - UNOPAR [cite: 7]</li>
+                <h4 style="color: #fff; margin-bottom: 15px; border-left: 4px solid var(--dourado); padding-left: 15px;">Formação Acadêmica</h4>
+                <ul style="list-style: none; color: #ddd; margin-bottom: 30px; line-height: 2;">
+                    <li>🎓 Pós-Graduação em Contabilidade, Perícia e Auditoria</li>
+                    <li>🎓 MBA em Planejamento e Gestão Tributária</li>
+                    <li>🎓 Bacharela em Ciências Contábeis - UNOPAR</li>
                 </ul>
 
-                <h4 style="color: #fff; margin-bottom: 10px; border-bottom: 1px solid var(--dourado); display: inline-block;">Experiência e Expertise</h4>
-                <ul style="list-style: none; color: #ddd; line-height: 1.8;">
-                    <li>💼 +20 anos de sólida experiência contábil e fiscal </li>
-                    <li>🔍 Perícias em Ações de Revisão do PASEP [cite: 37]</li>
-                    <li>📊 Cálculos Trabalhistas e Liquidação de Sentença [cite: 14, 36]</li>
+                <h4 style="color: #fff; margin-bottom: 15px; border-left: 4px solid var(--dourado); padding-left: 15px;">Experiência e Qualificações</h4>
+                <ul style="list-style: none; color: #ddd; line-height: 2;">
+                    <li>💼 +20 anos de experiência nas áreas Contábil e Fiscal</li>
+                    <li>🔍 Especialista em Cálculos de Revisão do PASEP</li>
+                    <li>🏛️ Perita nomeada no TJSP e Justiça Federal</li>
+                    <li>📊 Expertise em Cálculos Trabalhistas (PJe-Calc) e Revisionais</li>
                     <li>🦅 Integrante da Mentoria Águias</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section style="background-color: #111; text-align: center;">
-        <h2 class="secao-titulo">Processo de Atuação</h2>
-        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px;">
-            <div style="flex: 1; min-width: 200px;"><span style="font-size: 2.5rem; color: var(--dourado);">01</span><h4>Análise</h4><p>Estudo da viabilidade técnica[cite: 5].</p></div>
-            <div style="flex: 1; min-width: 200px;"><span style="font-size: 2.5rem; color: var(--dourado);">02</span><h4>Quesitos</h4><p>Elaboração estratégica[cite: 38].</p></div>
-            <div style="flex: 1; min-width: 200px;"><span style="font-size: 2.5rem; color: var(--dourado);">03</span><h4>Diligências</h4><p>Acompanhamento técnico[cite: 14].</p></div>
-            <div style="flex: 1; min-width: 200px;"><span style="font-size: 2.5rem; color: var(--dourado);">04</span><h4>Laudo</h4><p>Parecer fundamentado NBC TP 01[cite: 5, 16].</p></div>
-        </div>
-    </section>
-
-    <section>
-        <h2 class="secao-titulo">Serviços Especializados</h2>
-        <div class="grid">
-            <div class="card">
-                <details>
-                    <summary>Perícia Judicial [cite: 12]</summary>
-                    <p style="margin-top:15px; color: #ccc;">Atuação no TJSP e Justiça Federal, assegurando ética e imparcialidade conforme NBC PP 01[cite: 13, 16].</p>
-                </details>
-            </div>
-            <div class="card">
-                <details>
-                    <summary>Assistência Técnica [cite: 38]</summary>
-                    <p style="margin-top:15px; color: #ccc;">Suporte integral ao advogado, com foco em revisões bancárias e apuração de haveres[cite: 15].</p>
-                </details>
-            </div>
-            <div class="card">
-                <details>
-                    <summary>Cálculos do PASEP [cite: 37]</summary>
-                    <p style="margin-top:15px; color: #ccc;">Expertise técnica em cálculos periciais para ações de revisão do PASEP[cite: 37].</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
     <section style="background-color: #111;">
-        <h2 class="secao-titulo">Artigos Técnicos por Andreia Bento</h2>
+        <h2 class="secao-titulo">Artigos Técnicos e Expertise</h2>
         <div class="grid">
             <div class="card">
                 <details>
                     <summary>A Importância do Assistente Técnico</summary>
-                    <p style="margin-top:15px; color: #ccc;">Garante o contraditório e a fiscalização técnica, identificando inconsistências no laudo oficial[cite: 38, 46].</p>
+                    <p style="color:#bbb; padding-top:10px;">Fundamental para garantir o contraditório, o assistente técnico fiscaliza a prova pericial e orienta o advogado na elaboração de quesitos estratégicos.</p>
                 </details>
             </div>
             <div class="card">
                 <details>
-                    <summary>Juros Abusivos em Contratos</summary>
-                    <p style="margin-top:15px; color: #ccc;">Análise minuciosa de anatocismo e taxas acima da média de mercado do BACEN[cite: 15, 42].</p>
+                    <summary>Cálculos de Revisão do PASEP</summary>
+                    <p style="color:#bbb; padding-top:10px;">Análise técnica profunda para identificar má gestão e saques indevidos nas contas do PASEP de servidores públicos e militares.</p>
                 </details>
             </div>
             <div class="card">
                 <details>
-                    <summary>Dissolução Societária</summary>
-                    <p style="margin-top:15px; color: #ccc;">Aplicação de balanço de determinação para apuração justa de haveres de sócios[cite: 15, 25].</p>
+                    <summary>Perícia Bancária e Juros</summary>
+                    <p style="color:#bbb; padding-top:10px;">Identificação de anatocismo e taxas acima da média do BACEN em contratos de financiamento, crédito rural e cheque especial.</p>
                 </details>
             </div>
         </div>
     </section>
 
-    <footer style="background-color: #000; padding: 60px 20px; text-align: center; border-top: 4px solid var(--dourado);">
-        <div style="margin-bottom: 30px; display: flex; justify-content: center; gap: 40px;">
-            <a href="https://instagram.com/andreiabentoperita" target="_blank" style="font-size: 3.5rem; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"><i class="fab fa-instagram"></i></a>
-            <a href="https://facebook.com/profile.php?id=100080561289863" target="_blank" style="font-size: 3.5rem; color: #1877F2;"><i class="fab fa-facebook"></i></a>
-        </div>
-        <h3 style="color: var(--dourado);">Andreia Bento Franco da Rocha</h3>
-        <p>Contadora-Perita [cite: 12]</p>
-        <p style="color: var(--dourado);">CRC/SP 339199/O-2 [cite: 3]</p>
-        <p style="margin-top: 15px;">📧 periciasjudiciaisbento@hotmail.com [cite: 3]</p>
-        <p>📍 Jaú/SP [cite: 2]</p>
-    </footer>
-
-    <a href="https://wa.me/5514991167825" class="whats-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
-
-</body>
-</html>
+    <footer style="background-color: #000; padding: 60px 5%; text-align: center; border-top: 4px solid var(--dourado);">
+        <div style="margin-bottom: 30px; display: flex; justify-content: center;
