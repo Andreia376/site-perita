@@ -11,27 +11,19 @@
         :root { --dourado: #d4af37; --dourado-escuro: #b8860b; }
         nav { background: #000; padding: 20px 5%; border-bottom: 2px solid var(--dourado); position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
         .logo { color: var(--dourado); font-size: 1.4rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
-        
         .hero { height: 45vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070'); background-size: cover; padding: 20px; }
         .hero h1 { color: var(--dourado); font-size: clamp(1.8rem, 5vw, 3.2rem); margin-bottom: 10px; }
         .tag-nacional { background: var(--dourado); color: #000; padding: 5px 15px; font-weight: bold; border-radius: 50px; margin-bottom: 15px; font-size: 0.9rem; }
-
         section { padding: 60px 10%; }
         h2.secao-titulo { text-align: center; color: var(--dourado); font-size: 2.2rem; margin-bottom: 40px; border-bottom: 1px solid #222; padding-bottom: 15px; }
-
-        /* Container para a Foto Inteira e Currículo */
         .container-perfil { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 50px; max-width: 1200px; margin: 0 auto; }
         .foto-box { flex: 1; min-width: 320px; }
-        /* Ajuste para a foto aparecer por inteiro */
         .foto-box img { width: 100%; height: auto; border-radius: 10px; border: 3px solid var(--dourado); box-shadow: 0 15px 35px rgba(0,0,0,0.6); display: block; }
-        
         .info-box { flex: 1.5; min-width: 320px; }
         .btn-whats { background-color: #25d366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 10px; margin-top: 20px; }
-
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .card { padding: 25px; border: 1px solid #222; background: #111; border-radius: 10px; }
         summary { cursor: pointer; color: var(--dourado); font-weight: bold; font-size: 1.1rem; list-style: none; }
-        
         .cidades-tag { display: inline-block; background: #1a1a1a; color: #999; padding: 7px 15px; border-radius: 25px; font-size: 0.8rem; margin: 5px; border: 1px solid #333; }
         .whats-float { position:fixed; width:65px; height:65px; bottom:30px; right:30px; background-color:#25d366; color:#FFF; border-radius:50px; text-align:center; font-size:35px; z-index:9999; display:flex; align-items:center; justify-content:center; text-decoration:none; }
     </style>
@@ -53,7 +45,6 @@
             </div>
             <div class="info-box">
                 <h2 style="color: var(--dourado); margin-bottom: 20px;">Sobre a Perita</h2>
-                
                 <h4 style="color: #fff; margin-bottom: 10px; border-left: 5px solid var(--dourado); padding-left: 15px;">Formação Acadêmica</h4>
                 <ul style="list-style: none; color: #ddd; margin-bottom: 30px; line-height: 1.8;">
                     <li>🎓 Pós-Graduação em Contabilidade, Perícia e Auditoria</li>
@@ -61,7 +52,6 @@
                     <li>🎓 Bacharela em Ciências Contábeis</li>
                     <li>💼 +20 anos de sólida experiência contábil e fiscal</li>
                 </ul>
-
                 <h4 style="color: #fff; margin-bottom: 10px; border-left: 5px solid var(--dourado); padding-left: 15px;">Especialidades Técnicas</h4>
                 <ul style="list-style: none; color: #ddd; line-height: 1.8;">
                     <li>🔍 Especialista em Cálculos de Revisão do PASEP</li>
@@ -69,29 +59,22 @@
                     <li>📊 Revisionais, Apuração de Haveres e Liquidação de Sentença</li>
                     <li>🦅 Integrante da Mentoria Águias</li>
                 </ul>
-
                 <a href="https://wa.me/5514991167825" target="_blank" class="btn-whats"><i class="fab fa-whatsapp"></i> Falar com a Perita</a>
             </div>
         </div>
     </section>
 
-    <section style="background-color: #111;">
-        <h2 class="secao-titulo">Expertise Nacional</h2>
-        <div class="grid">
-            <div class="card"><details><summary>Perícia Judicial Digital</summary><p style="color:#bbb; padding-top:10px;">Atuação nacional em processos eletrônicos com máxima precisão e cumprimento de prazos.</p></details></div>
-            <div class="card"><details><summary>Cálculos do PASEP</summary><p style="color:#bbb; padding-top:10px;">Identificação técnica de saques indevidos e má gestão de saldos para servidores públicos.</p></details></div>
-            <div class="card"><details><summary>Assistência Técnica</summary><p style="color:#bbb; padding-top:10px;">Suporte estratégico para advogados com quesitos e análise de laudos periciais.</p></details></div>
+    <footer style="background-color: #000; padding: 60px 5%; text-align: center; border-top: 5px solid var(--dourado);">
+        
+        <div style="margin-bottom: 30px; display: flex; justify-content: center; gap: 40px;">
+            <a href="https://www.instagram.com/andreiabentoperita" target="_blank" style="font-size: 3rem; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none;">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100080561289863" target="_blank" style="font-size: 3rem; color: #1877F2; text-decoration: none;">
+                <i class="fab fa-facebook"></i>
+            </a>
         </div>
-    </section>
 
-    <footer style="background-color: #000; padding: 60px 5%; text-align: center;<div style="margin-bottom: 30px; display: flex; justify-content: center; gap: 40px;">
-    <a href="https://instagram.com/andreiabentoperita" target="_blank" style="font-size: 3rem; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none;">
-        <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://facebook.com/profile.php?id=100080561289863" target="_blank" style="font-size: 3rem; color: #1877F2; text-decoration: none;">
-        <i class="fab fa-facebook"></i>
-    </a>
-</div>  border-top: 5px solid var(--dourado);">
         <h3 style="color: var(--dourado); margin-bottom: 10px;">Andréia Bento Franco da Rocha</h3>
         <p style="color: #bbb;">CRC/SP 339199/O-2 | periciasjudiciaisbento@hotmail.com</p>
         <p style="color: #bbb; margin-bottom: 25px;">📍 Jaú/SP - Atendimento Presencial e Remoto</p>
